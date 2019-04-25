@@ -1,10 +1,16 @@
 @import 'variables';
 
 // Bootstrap
+@import 'variables';
+
+// Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-/* universal */
-
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
@@ -20,4 +26,37 @@ body {
   border-bottom: 1px solid #e8e8e8;
   margin-bottom: 40px;
   margin-top: 0px;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000;
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    p {
+      margin: 19px 0;
+      color: #c1c1c1;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.register-page {
+  img.captcha {
+    cursor: pointer;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 3px;
+  }
 }
