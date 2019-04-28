@@ -24,5 +24,5 @@ Route::get('email/resend', 'Auth\VerificationController@resend')->name('verifica
 Auth::routes();
 
 Route::get('/users/{user}', 'UsersController@show')->name('users.show');
-Route::get('/users/edit/{user}', 'UsersController@edit')->name('users.edit');
+Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
 Route::put('/users/update/{user}', 'UsersController@update')->name('users.update');
