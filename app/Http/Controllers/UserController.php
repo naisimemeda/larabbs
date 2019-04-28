@@ -10,12 +10,8 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     //
-    public function register(Request $request){
-        User::create($request->all());
-    }
 
-    public function login(Request $request){
-        $token  = Auth::guard()->attempt(['email'=>$request->email,'password'=>$request->password]);
-        return redirect('/');
+    public function register(UserRequests $request){
+        User::create($request->all());
     }
 }
