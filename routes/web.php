@@ -9,7 +9,7 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // 用户注册相关路由
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegisterController@register');
+Route::post('register', 'UserController@register');
 
 // 密码重置相关路由
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
@@ -23,4 +23,6 @@ Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('ver
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+Route::get('/users/edit/{user}', 'UsersController@edit')->name('users.edit');
+Route::put('/users/update/{user}', 'UsersController@update')->name('users.update');
