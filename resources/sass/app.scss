@@ -15,7 +15,20 @@ body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
 }
+@import "topic_body";
 
+.topics-show-page {
+
+  .card {
+    padding: 15px;
+
+    h1 {
+      margin: 0.4em auto 0.6em;
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+}
 /* header */
 
 .navbar-static-top {
@@ -98,4 +111,7 @@ body {
 
 #app > div.container {
   margin-bottom: 100px;
+}
+.simditor-body img {
+  max-width:100%;
 }
